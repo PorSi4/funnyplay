@@ -1,223 +1,305 @@
 <!doctype html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Funny play</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17719785925"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-17719785925');
+  </script>
+
   <!-- Fonte -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-  :root{
-    --bg-top: #0b0012;
-    --purple-1: #4c1d8f;
-    --purple-2: #8b4bff;
-    --accent: #ab6bff;
-    --glass: rgba(255,255,255,0.03);
-    --muted: rgba(255,255,255,0.18);
-  }
+    :root {
+      --bg-top: #0b0012;
+      --purple-1: #4c1d8f;
+      --purple-2: #8b4bff;
+      --accent: #ab6bff;
+      --glass: rgba(255, 255, 255, 0.03);
+      --muted: rgba(255, 255, 255, 0.18);
+    }
 
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:"Poppins",system-ui,-apple-system,"Segoe UI",Roboto, "Helvetica Neue", Arial;
+    * {
+      box-sizing: border-box
+    }
+
+    html,
+    body {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
       color: #e6e6ee;
-      background: linear-gradient(180deg, rgba(10,7,18,1) 0%, rgba(21,9,32,1) 10%, rgba(43,17,74,0.9) 40%, #5b2fc4 100%);
-      min-height:100vh;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      background: linear-gradient(180deg, rgba(10, 7, 18, 1) 0%, rgba(21, 9, 32, 1) 10%, rgba(43, 17, 74, 0.9) 40%, #5b2fc4 100%);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     /* Top nav */
-    .nav{
-      height:74px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding:18px 48px;
-      gap:20px;
-      position:relative;
-      z-index:5;
-      background: linear-gradient(180deg, rgba(0,0,0,0.5), transparent);
-      border-bottom:1px solid rgba(255,255,255,0.02);
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px 48px;
+      gap: 20px;
+      position: relative;
+      z-index: 5;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.02);
     }
 
-    .brand{
-      display:flex;
-      gap:12px;
-      align-items:center;
-      color:var(--purple-1);
-      font-weight:700;
-      letter-spacing:0.4px;
-    }
-    .brand .logo{
-      width:36px;
-      height:28px;
-      border-radius:8px;
-      background: linear-gradient(135deg,var(--purple-1),var(--purple-2));
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      color:white;
-      font-weight:700;
-      box-shadow: 0 6px 20px rgba(75,20,140,0.25), inset 0 -6px 20px rgba(0,0,0,0.15);
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      color: var(--purple-1);
+      font-weight: 700;
+      letter-spacing: 0.4px;
     }
 
-    .nav-links{
-      display:flex;
-      gap:26px;
-      align-items:center;
+    .brand .logo {
+      width: 36px;
+      height: 28px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--purple-1), var(--purple-2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      box-shadow: 0 6px 20px rgba(75, 20, 140, 0.25), inset 0 -6px 20px rgba(0, 0, 0, 0.15);
     }
-    .nav-links a{
-      color: rgba(255,255,255,0.85);
-      text-decoration:none;
-      font-weight:500;
-      opacity:0.9;
-      transition:opacity .15s;
-    }
-    .nav-links a:hover{opacity:1}
 
-    .nav .cta{
-      background: linear-gradient(90deg,var(--purple-2),var(--accent));
-      border-radius:10px;
-      padding:10px 16px;
-      color:white;
-      text-decoration:none;
-      font-weight:600;
-      box-shadow: 0 8px 30px rgba(99,43,204,0.18);
+    .nav-links {
+      display: flex;
+      gap: 26px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      font-weight: 500;
+      opacity: 0.9;
+      transition: opacity .15s;
+    }
+
+    .nav-links a:hover {
+      opacity: 1
+    }
+
+    .nav .cta {
+      background: linear-gradient(90deg, var(--purple-2), var(--accent));
+      border-radius: 10px;
+      padding: 10px 16px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 8px 30px rgba(99, 43, 204, 0.18);
     }
 
     /* Hero */
-    .hero{
-      max-width:1180px;
-      margin:64px auto 120px;
-      display:grid;
+    .hero {
+      max-width: 1180px;
+      margin: 64px auto 120px;
+      display: grid;
       grid-template-columns: 1fr 480px;
-      gap:48px;
-      align-items:center;
-      padding:0 48px;
-      position:relative;
+      gap: 48px;
+      align-items: center;
+      padding: 0 48px;
+      position: relative;
     }
 
-    .hero-left{
-      padding-top:20px;
-    }
-    .eyebrow{
-      display:inline-flex;
-      gap:8px;
-      align-items:center;
-      margin-bottom:18px;
-      color:var(--muted);
-      font-size:14px;
+    .hero-left {
+      padding-top: 20px;
     }
 
-    h1{
-      font-size:64px;
-      line-height:0.95;
-      margin:0 0 18px 0;
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: 64px;
+      line-height: 0.95;
+      margin: 0 0 18px 0;
       color: #caa7ff;
-      font-weight:800;
-      text-shadow: 0 10px 40px rgba(24,0,50,0.35);
-    }
-    p.lead{
-      max-width:640px;
-      color: rgba(230,230,238,0.75);
-      font-weight:400;
-      margin-bottom:26px;
-      font-size:16px;
+      font-weight: 800;
+      text-shadow: 0 10px 40px rgba(24, 0, 50, 0.35);
     }
 
-    .buttons{
-      display:flex;
-      gap:14px;
-      align-items:center;
-      margin-top:8px;
+    p.lead {
+      max-width: 640px;
+      color: rgba(230, 230, 238, 0.75);
+      font-weight: 400;
+      margin-bottom: 26px;
+      font-size: 16px;
     }
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:12px 20px;
-      border-radius:12px;
-      font-weight:600;
-      text-decoration:none;
-      cursor:pointer;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    .buttons {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      margin-top: 8px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
       transition: transform .12s ease, box-shadow .12s ease;
     }
-    .btn:active{ transform: translateY(1px) }
 
-    .btn-primary{
-      background: linear-gradient(90deg,var(--purple-2),var(--accent));
-      color:white;
+    .btn:active {
+      transform: translateY(1px)
+    }
+
+    .btn-primary {
+      background: linear-gradient(90deg, var(--purple-2), var(--accent));
+      color: white;
       border: none;
     }
 
-    .btn-ghost{
+    .btn-ghost {
       background: transparent;
-      color: rgba(255,255,255,0.9);
-      border: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       backdrop-filter: blur(4px);
     }
 
-    .btn .ico{
-      width:18px;height:18px;border-radius:50%;
-      border:2px solid rgba(255,255,255,0.25);
-      display:inline-block;
+    .btn .ico {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 2px solid rgba(255, 255, 255, 0.25);
+      display: inline-block;
     }
 
     /* Right decorative squares */
-    .hero-right{
-      position:relative;
-      height:420px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
+    .hero-right {
+      position: relative;
+      height: 420px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .square{
-      position:absolute;
-      width:140px;
-      height:120px;
-      border-radius:18px;
-      border: 2px solid rgba(255,255,255,0.03);
-      background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.02));
-      box-shadow: inset 0 -8px 40px rgba(0,0,0,0.25);
+    .square {
+      position: absolute;
+      width: 140px;
+      height: 120px;
+      border-radius: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.03);
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.02));
+      box-shadow: inset 0 -8px 40px rgba(0, 0, 0, 0.25);
       backdrop-filter: blur(6px);
       transform: rotate(-2deg);
     }
-    .sq-1{ top:28px; right:120px; width:160px; height:120px; opacity:0.55; }
-    .sq-2{ top:140px; right:40px; width:200px; height:160px; opacity:0.45; transform: rotate(1deg); }
-    .sq-3{ top:260px; right:180px; width:120px; height:100px; opacity:0.35; transform: rotate(-4deg); }
+
+    .sq-1 {
+      top: 28px;
+      right: 120px;
+      width: 160px;
+      height: 120px;
+      opacity: 0.55;
+    }
+
+    .sq-2 {
+      top: 140px;
+      right: 40px;
+      width: 200px;
+      height: 160px;
+      opacity: 0.45;
+      transform: rotate(1deg);
+    }
+
+    .sq-3 {
+      top: 260px;
+      right: 180px;
+      width: 120px;
+      height: 100px;
+      opacity: 0.35;
+      transform: rotate(-4deg);
+    }
 
     /* Footer-like gradient fade at bottom */
-    .page-bottom-fade{
-      position:fixed;
-      left:0;right:0;bottom:0;height:220px;
-      background: linear-gradient(180deg, transparent, rgba(91,47,196,0.95));
-      pointer-events:none;
-      z-index:1;
+    .page-bottom-fade {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 220px;
+      background: linear-gradient(180deg, transparent, rgba(91, 47, 196, 0.95));
+      pointer-events: none;
+      z-index: 1;
     }
 
     /* Responsive */
-    @media (max-width:980px){
-      .hero{ grid-template-columns: 1fr; gap:24px; padding:0 28px; margin-top:48px; }
-      h1{ font-size:44px; }
-      .hero-right{ height:260px }
-      .nav{ padding:12px 20px; }
-      .nav-links{ display:none; }
+    @media (max-width:980px) {
+      .hero {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 0 28px;
+        margin-top: 48px;
+      }
+
+      h1 {
+        font-size: 44px;
+      }
+
+      .hero-right {
+        height: 260px
+      }
+
+      .nav {
+        padding: 12px 20px;
+      }
+
+      .nav-links {
+        display: none;
+      }
     }
 
-    @media (max-width:520px){
-      h1{ font-size:34px; }
-      .brand{font-size:14px}
-      .hero{ margin-bottom:60px }
+    @media (max-width:520px) {
+      h1 {
+        font-size: 34px;
+      }
+
+      .brand {
+        font-size: 14px
+      }
+
+      .hero {
+        margin-bottom: 60px
+      }
     }
   </style>
 </head>
+
 <body>
 
   <!-- top navigation -->
@@ -259,12 +341,16 @@
           Troque o número abaixo (ex.: 5511999999999) pelo seu número sem +, parênteses ou traços.
           O mesmo número está usado no botão superior "Teste IPTV WhatsApp".
         -->
-        <a class="btn btn-primary" id="btn-solicitar" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20do%20teste%20IPTV%20gr%C3%A1tis." target="_blank" rel="noopener noreferrer" aria-label="Solicitar Teste IPTV Grátis">
+        <a class="btn btn-primary" id="btn-solicitar"
+          href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20do%20teste%20IPTV%20gr%C3%A1tis."
+          target="_blank" rel="noopener noreferrer" aria-label="Solicitar Teste IPTV Grátis">
           <span class="ico" aria-hidden="true"></span>
           Solicitar Teste
         </a>
 
-        <a class="btn btn-ghost" id="btn-como" href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20o%20teste%20IPTV." target="_blank" rel="noopener noreferrer" aria-label="Como Funciona">
+        <a class="btn btn-ghost" id="btn-como"
+          href="https://wa.me/5511999999999?text=Ol%C3%A1%2C%20quero%20fazer%20o%20teste%20IPTV." target="_blank"
+          rel="noopener noreferrer" aria-label="Como Funciona">
           <span style="font-weight:700; font-size:14px;">i</span>
           Como Funciona
         </a>
@@ -304,4 +390,5 @@
     });
   </script>
 </body>
+
 </html>
